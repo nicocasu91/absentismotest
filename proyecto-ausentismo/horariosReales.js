@@ -1,8 +1,9 @@
 class HorariosReales {
-    constructor(fecha, horarioInicioReal, horarioFinReal) {
+    constructor(legajo, fecha, horarioInicioReal, horarioFinReal) {
         this._fecha = fecha;
         this._horarioInicioReal = horarioInicioReal;
         this._horarioFinReal = horarioFinReal;
+        this._legajo = legajo;
     }
 
     // Getter y setter para la propiedad fecha

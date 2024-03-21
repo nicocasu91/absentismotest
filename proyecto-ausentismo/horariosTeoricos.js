@@ -1,31 +1,41 @@
-class TheoricalSegment {
-    constructor (startingHour, exitHour, isWorkingDay){
-        this._startingHour = startingHour;
-        this._exitHour = exitHour;
-        this._isWorkingDay = isWorkingDay;
+class HorarioTeorico {
+    constructor (legajo, horaInicioTeorico, horaFinTeorica, esFeriado){
+        this._horaInicioTeorico = horaInicioTeorico;
+        this._horaFinTeorica = horaFinTeorica;
+        this._esFeriado = esFeriado;
+        this._legajo = legajo;
     }
 
-    get startingHour(){
-        return this._startingHour;
+    get horaInicioTeorico(){
+        return this._horaInicioReal;
     }
-    set startingHour(startingHour){
-        this._startingHour = startingHour;
-    }
-
-    get exitHour(){
-        return this._exitHour;
-    }
-    set exitHour(exitHour){
-        this._exitHour = exitHour;
+    set horaInicioTeorico(horaInicioTeorico){
+        this._horaInicioReal = horaInicioTeorico;
     }
 
-    get isWorkingDay(){
-        return this.isWorkingDay;
+    get horaFinTeorica(){
+        return this._horaFinTeorica;
     }
-    set isWorkingDay(isWorkingDay){
-        this._isWorkingDay = isWorkingDay;
+    set horaFinTeorica(horaFinTeorica){
+        this._horaFinTeorica = horaFinTeorica;
     }
+
+    get esFeriado(){
+        return this.esFeriado;
+    }
+    set esFeriado(esFeriado){
+        this._esFeriado = esFeriado;
+    }
+        // Getter para el ID
+        get legajo() {
+            return this._legajo;
+        }
+    
+        // Setter para el ID
+        set legajo(newId) {
+            this._legajo = newId;
+        }
 
 }
 
-module.exports = TheoricalSegment;
+module.exports = HorarioTeorico;
